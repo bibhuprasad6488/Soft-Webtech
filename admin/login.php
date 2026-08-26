@@ -48,7 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // ✅ Set session variables after successful login
             $_SESSION['admin_id'] = $row['id'];
             $_SESSION['admin_email'] = $row['email']; // Changed from `username` to `email`
-            $_SESSION['admin_name'] = $row['email']; // Changed from `username` to `email`
+            $_SESSION['admin_name'] = $row['admin_name']; // Changed from `username` to `email`
 
             // ✅ Return JSON response
             // http_response_code(200);

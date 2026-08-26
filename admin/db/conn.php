@@ -8,10 +8,10 @@ if ($_SERVER['HTTP_HOST'] == 'localhost') {
     $dbname = "softwebtechs";
 } else {
     // Live environment
-    $servername = "sql304.infinityfree.com"; // e.g., "localhost" or your hosting IP
-    $username = "if0_38233831";
-    $password = "wV00d9wGzQvN";
-    $dbname = "if0_38233831_yt_app";
+    $servername = "localhost"; // e.g., "localhost" or your hosting IP
+    $username = "softwebtechs_main";
+    $password = "QX4M;AbQPtZuhCu$";
+    $dbname = "softwebtechs_main";
 }
 
 // Create connection

@@ -5,7 +5,7 @@
 		<div class="row text-muted">
 			<div class="col-6 text-start">
 				<p class="mb-0">
-					<a class="text-muted" href="javascript:;" target="_blank"><strong>YT Admin</strong></a> &copy;
+					<a class="text-muted" href="javascript:;" target="_blank"><strong>Softwebtechs Admin</strong></a> &copy;
 					<?= date('Y'); ?>
 				</p>
 			</div>
@@ -67,12 +67,12 @@
 
 		function logout() {
 			alert("Session expired. Redirecting to login...");
-			window.location.href = "logout.php"; // Redirect to logout page
+			window.location.href = "logout"; // Redirect to logout page
 		}
 
 		function resetTimer() {
 			clearTimeout(timeout);
-			timeout = setTimeout(logout, 900000); // 15 minutes = 900000ms
+			timeout = setTimeout(logout, 300000); // 5 minutes  = 300000ms
 		}
 
 		document.onload = resetTimer;

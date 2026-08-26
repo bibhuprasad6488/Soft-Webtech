@@ -1,4 +1,6 @@
-<?php include 'db/conn.php';
+<?php
+session_start();
+include 'db/conn.php';
 $base_url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http")
     . "://$_SERVER[HTTP_HOST]"
     . rtrim(dirname($_SERVER['SCRIPT_NAME']), '/');
@@ -17,6 +19,7 @@ $base_url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : 
 
     <title>Sign In | Admin</title>
 
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
     <link href="css/app.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
@@ -76,8 +79,17 @@ $base_url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : 
                                         </div>
                                         <div class="mb-3">
                                             <label class="form-label">Password</label>
-                                            <input class="form-control form-control-lg" type="password" name="password"
-                                                id="password" placeholder="Enter your password" />
+                                            <div class="input-group">
+                                                <input class="form-control form-control-lg" type="password" name="password"
+                                                    id="password" placeholder="Enter your password" />
+
+                                                <button
+                                                    type="button"
+                                                    class="btn btn-outline-secondary password-toggle"
+                                                    data-target="password">
+                                                    <i class="fa fa-eye"></i>
+                                                </button>
+                                            </div>
                                             <small>
                                                 <a href="javascript:;">Forgot password?</a>
                                             </small>
@@ -131,20 +143,31 @@ $base_url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : 
                     },
                     dataType: 'json',
                     success: function(response) {
-                        console.log(response);
+                        // console.log(response);
 
-                        if (response.status === true) { // ✅ Checking for `true`
+                        // if (response.status === true) { // ✅ Checking for `true`
+                        //     toastr.success(response.message);
+                        //     if (confirm('✅ Login Successful')) {
+                        //         window.location.href = "<?= $base_url ?>/dashboard"; // ✅ Redirect after success
+                        //     } else {
+                        //         window.location.href = "<?= $base_url ?>/logout"; // ✅ Redirect after success
+                        //     }
+                        // } else {
+                        //     toastr.error(response.message);
+                        //     console.log('Error:', response); // Log error
+                        //     alert(response.message); // Show error message if login fails
+                        //     $('#password').val(''); // Clear password field
+                        // }
+                        if (response.status === true) {
                             toastr.success(response.message);
-                            if (confirm('✅ Login Successful')) {
-                                window.location.href = "dashboard"; // ✅ Redirect after success
-                            } else {
-                                window.location.href = "logout"; // ✅ Redirect after success
-                            }
+                            setTimeout(function() {
+                                window.location.href = "<?= $base_url ?>/dashboard";
+                            }, 800);
+
                         } else {
+
                             toastr.error(response.message);
-                            console.log('Error:', response); // Log error
-                            alert(response.message); // Show error message if login fails
-                            $('#password').val(''); // Clear password field
+                            $('#password').val('');
                         }
                     },
                     error: function(xhr, status, error) {
@@ -152,6 +175,32 @@ $base_url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : 
                     }
                 });
             });
+        });
+    </script>
+    <script>
+        document.querySelectorAll('.password-toggle').forEach(function(button) {
+            button.addEventListener('click', function() {
+                const targetId = this.getAttribute('data-target');
+                const passwordInput = document.getElementById(targetId);
+                const icon = this.querySelector('i');
+                if (passwordInput.type === 'password') {
+
+                    passwordInput.type = 'text';
+
+                    icon.classList.remove('fa-eye');
+                    icon.classList.add('fa-eye-slash');
+
+                } else {
+
+                    passwordInput.type = 'password';
+
+                    icon.classList.remove('fa-eye-slash');
+                    icon.classList.add('fa-eye');
+
+                }
+
+            });
+
         });
     </script>
     <script>

@@ -10,110 +10,74 @@
 
             <li class="sidebar-item <?php echo ($currpage == 'dashboard') ? 'active' : ''; ?>">
                 <a class="sidebar-link" href="<?= $base_url ?>/dashboard">
-                    <i class="align-middle" data-feather="sliders"></i> <span
-                        class="align-middle">Dashboard</span>
+                    <i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Dashboard</span>
                 </a>
             </li>
 
-            <!-- <li class="sidebar-item <?php echo ($currpage == 'yt-content-fetch') ? 'active' : ''; ?>">
-                <a class="sidebar-link" href="<?= $base_url ?>/yt-content-fetch">
-                    <i class="fa fa-youtube-play" aria-hidden="true"></i>
-                    <span class="align-middle">Yt Content Download</span>
-                </a>
-            </li>
-
-            <li class="sidebar-item <?php echo ($currpage == 'all-youtube-videos') ? 'active' : ''; ?>">
-                <a class="sidebar-link" href="<?= $base_url ?>/all-youtube-videos">
-                    <i class="fa fa-youtube-play" aria-hidden="true"></i>
-                    <span class="align-middle">All YouTube Videos</span>
-                </a>
-            </li>
-
-            <li class="sidebar-item <?php echo (isset($currpage) && ($currpage == 'manage-pages' || $currpage == 'add-page')) ? 'active' : ''; ?>">
-                <a class="sidebar-link" href="<?= $base_url ?>/manage-pages">
-                    <i class="fa fa-file-text" aria-hidden="true"></i>
-                    <span class="align-middle">Manage Pages</span>
-                </a>
-            </li>
-
-            <li class="sidebar-item <?php echo (isset($currpage) && ($currpage == 'upload-video')) ? 'active' : ''; ?>">
-                <a class="sidebar-link" href="<?= $base_url ?>/upload-video">
-                    <i class="fa fa-file-video-o" aria-hidden="true"></i>
-                    <span class="align-middle">Upload Video</span>
-                </a>
-            </li> -->
-            <li class="sidebar-item <?php echo (isset($currpage) && ($currpage == 'blogs') || ($currpage == 'add_post') || ($currpage == 'edit_post')) ? 'active' : ''; ?>">
+            <li
+                class="sidebar-item <?php echo (isset($currpage) && ($currpage == 'blogs') || ($currpage == 'add_post') || ($currpage == 'edit_post')) ? 'active' : ''; ?>">
                 <a class="sidebar-link" href="<?= $base_url ?>/blogs">
                     <i class="fa fa-th" aria-hidden="true"></i>
                     <span class="align-middle">Blogs</span>
                 </a>
             </li>
 
-
-            <!-- <li class="sidebar-item">
-                <a class="sidebar-link" href="pages-sign-up.html">
-                    <i class="align-middle" data-feather="user-plus"></i> <span class="align-middle">Sign
-                        Up</span>
+            <li class="sidebar-item <?php echo (isset($currpage) && in_array($currpage, ['f-homepage', 'f-about-us', 'f-contact'])) ? 'active' : ''; ?>">
+                <a class="sidebar-link" href="#pagesMenu" data-bs-toggle="collapse"
+                    aria-expanded="<?= (isset($currpage) && in_array($currpage, ['f-homepage', 'f-about-us', 'f-contact'])) ? 'true' : 'false'; ?>">
+                    <i class="align-middle" data-feather="list"></i>
+                    <span class="align-middle">
+                        Cms Pages
+                    </span>
+                    <i class="align-middle ms-auto" data-feather="chevron-down"></i>
                 </a>
+
+                <ul id="pagesMenu" class="sidebar-dropdown list-unstyled collapse 
+                <?php echo (isset($currpage) && in_array($currpage, ['f-homepage', 'f-about-us', 'f-contact'])) ? 'show' : ''; ?>">
+
+                    <li class="sidebar-item <?php echo ($currpage == 'f-homepage') ? 'active' : ''; ?>">
+                        <a class="sidebar-link" href="<?= $base_url ?>/f-homepage">
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="sidebar-item <?php echo ($currpage == 'f-about-us') ? 'active' : ''; ?>">
+                        <a class="sidebar-link" href="<?= $base_url ?>/f-about-us">
+                            About
+                        </a>
+                    </li>
+                </ul>
             </li>
 
-            <li class="sidebar-item">
-                <a class="sidebar-link" href="pages-blank.html">
-                    <i class="align-middle" data-feather="book"></i> <span class="align-middle">Blank</span>
+
+            <!-- <li class="sidebar-item <?php echo (isset($currpage) && in_array($currpage, ['users', 'create-user', 'edit-user'])) ? 'active' : ''; ?>">
+
+                <a class="sidebar-link" href="#usersMenu" data-bs-toggle="collapse"
+                    aria-expanded="<?= (isset($currpage) && in_array($currpage, ['users', 'create-user', 'edit-user'])) ? 'true' : 'false'; ?>">
+
+                    <i class="align-middle" data-feather="users"></i>
+
+                    <span class="align-middle">
+                        Users
+                    </span>
+                    <i class="align-middle ms-auto" data-feather="chevron-down"></i>
                 </a>
-            </li>
 
-            <li class="sidebar-header">
-                Tools & Components
-            </li>
+                <ul id="usersMenu" class="sidebar-dropdown list-unstyled collapse 
+                <?php echo (isset($currpage) && in_array($currpage, ['users', 'create-user', 'edit-user'])) ? 'show' : ''; ?>">
 
-            <li class="sidebar-item">
-                <a class="sidebar-link" href="ui-buttons.html">
-                    <i class="align-middle" data-feather="square"></i> <span class="align-middle">Buttons</span>
-                </a>
-            </li>
+                    <li class="sidebar-item <?php echo ($currpage == 'users') ? 'active' : ''; ?>">
+                        <a class="sidebar-link" href="<?= $base_url ?>/users">
+                            All Users
+                        </a>
+                    </li>
 
-            <li class="sidebar-item">
-                <a class="sidebar-link" href="ui-forms.html">
-                    <i class="align-middle" data-feather="check-square"></i> <span
-                        class="align-middle">Forms</span>
-                </a>
-            </li>
-
-            <li class="sidebar-item">
-                <a class="sidebar-link" href="ui-cards.html">
-                    <i class="align-middle" data-feather="grid"></i> <span class="align-middle">Cards</span>
-                </a>
-            </li>
-
-            <li class="sidebar-item">
-                <a class="sidebar-link" href="ui-typography.html">
-                    <i class="align-middle" data-feather="align-left"></i> <span
-                        class="align-middle">Typography</span>
-                </a>
-            </li>
-
-            <li class="sidebar-item">
-                <a class="sidebar-link" href="icons-feather.html">
-                    <i class="align-middle" data-feather="coffee"></i> <span class="align-middle">Icons</span>
-                </a>
-            </li>
-
-            <li class="sidebar-header">
-                Plugins & Addons
-            </li>
-
-            <li class="sidebar-item">
-                <a class="sidebar-link" href="charts-chartjs.html">
-                    <i class="align-middle" data-feather="bar-chart-2"></i> <span
-                        class="align-middle">Charts</span>
-                </a>
-            </li>
-
-            <li class="sidebar-item">
-                <a class="sidebar-link" href="maps-google.html">
-                    <i class="align-middle" data-feather="map"></i> <span class="align-middle">Maps</span>
-                </a>
+                    <li class="sidebar-item <?php echo ($currpage == 'create-user') ? 'active' : ''; ?>">
+                        <a class="sidebar-link" href="<?= $base_url ?>/create-user">
+                            Create User
+                        </a>
+                    </li>
+                </ul>
             </li> -->
         </ul>
 
