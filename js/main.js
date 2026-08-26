@@ -742,92 +742,92 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
-(function () {
-    'use strict';
+// (function () {
+//     'use strict';
 
-    // Disable right-click context menu
-    document.addEventListener('contextmenu', function (e) {
-        e.preventDefault();
-    });
+//     // Disable right-click context menu
+//     document.addEventListener('contextmenu', function (e) {
+//         e.preventDefault();
+//     });
 
-    // Disable common developer/inspection shortcuts
-    document.addEventListener('keydown', function (e) {
-        // F12
-        if (e.key === 'F12') {
-            e.preventDefault();
-            return false;
-        }
+//     // Disable common developer/inspection shortcuts
+//     document.addEventListener('keydown', function (e) {
+//         // F12
+//         if (e.key === 'F12') {
+//             e.preventDefault();
+//             return false;
+//         }
 
-        // Ctrl + Shift + I
-        if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'i') {
-            e.preventDefault();
-            return false;
-        }
+//         // Ctrl + Shift + I
+//         if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'i') {
+//             e.preventDefault();
+//             return false;
+//         }
 
-        // Ctrl + Shift + J
-        if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'j') {
-            e.preventDefault();
-            return false;
-        }
+//         // Ctrl + Shift + J
+//         if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'j') {
+//             e.preventDefault();
+//             return false;
+//         }
 
-        // Ctrl + Shift + C
-        if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'c') {
-            e.preventDefault();
-            return false;
-        }
+//         // Ctrl + Shift + C
+//         if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'c') {
+//             e.preventDefault();
+//             return false;
+//         }
 
-        // Ctrl + U (View Source)
-        if (e.ctrlKey && e.key.toLowerCase() === 'u') {
-            e.preventDefault();
-            return false;
-        }
+//         // Ctrl + U (View Source)
+//         if (e.ctrlKey && e.key.toLowerCase() === 'u') {
+//             e.preventDefault();
+//             return false;
+//         }
 
-        // Ctrl + S
-        if (e.ctrlKey && e.key.toLowerCase() === 's') {
-            e.preventDefault();
-            return false;
-        }
-    });
+//         // Ctrl + S
+//         if (e.ctrlKey && e.key.toLowerCase() === 's') {
+//             e.preventDefault();
+//             return false;
+//         }
+//     });
 
-    // Basic DevTools detection
-    let devtoolsOpen = false;
+//     // Basic DevTools detection
+//     let devtoolsOpen = false;
 
-    const threshold = 160;
+//     const threshold = 160;
 
-    setInterval(function () {
-        const widthDiff = window.outerWidth - window.innerWidth;
-        const heightDiff = window.outerHeight - window.innerHeight;
+//     setInterval(function () {
+//         const widthDiff = window.outerWidth - window.innerWidth;
+//         const heightDiff = window.outerHeight - window.innerHeight;
 
-        if (widthDiff > threshold || heightDiff > threshold) {
-            if (!devtoolsOpen) {
-                devtoolsOpen = true;
+//         if (widthDiff > threshold || heightDiff > threshold) {
+//             if (!devtoolsOpen) {
+//                 devtoolsOpen = true;
 
-                console.clear();
+//                 console.clear();
 
-                // Optional action
-                document.body.innerHTML = `
-                    <div style="
-                        position:fixed;
-                        inset:0;
-                        display:flex;
-                        align-items:center;
-                        justify-content:center;
-                        background:#111;
-                        color:#fff;
-                        font-family:Arial,sans-serif;
-                        text-align:center;
-                        z-index:999999;
-                    ">
-                        <div>
-                            <h2>Developer Tools Detected</h2>
-                            <p>Please close Developer Tools to continue.</p>
-                        </div>
-                    </div>
-                `;
-            }
-        } else {
-            devtoolsOpen = false;
-        }
-    }, 1000);
+//                 // Optional action
+//                 document.body.innerHTML = `
+//                     <div style="
+//                         position:fixed;
+//                         inset:0;
+//                         display:flex;
+//                         align-items:center;
+//                         justify-content:center;
+//                         background:#111;
+//                         color:#fff;
+//                         font-family:Arial,sans-serif;
+//                         text-align:center;
+//                         z-index:999999;
+//                     ">
+//                         <div>
+//                             <h2>Developer Tools Detected</h2>
+//                             <p>Please close Developer Tools to continue.</p>
+//                         </div>
+//                     </div>
+//                 `;
+//             }
+//         } else {
+//             devtoolsOpen = false;
+//         }
+//     }, 1000);
 
-})();
+// })();
