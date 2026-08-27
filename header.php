@@ -207,7 +207,7 @@ $ogImage = $ogImage ?? $base_url . '/img/og-image.jpg';
 
                         <!-- DESKTOP CTA -->
                         <div class="desktop-cta">
-                            <a href="#contact" class="btn-consultation">
+                            <a href="<?= $base_url ?>/contact" class="btn-consultation">
                                 Get Free Consultation
 
                                 <i class="bi bi-arrow-up-right"></i>
@@ -296,7 +296,7 @@ $ogImage = $ogImage ?? $base_url . '/img/og-image.jpg';
 
                 <!-- MOBILE CTA -->
                 <div class="mobile-cta">
-                    <a href="#contact" class="btn-consultation">
+                    <a href="<?= $base_url ?>/contact" class="btn-consultation">
                         Get Free Consultation
 
                         <i class="bi bi-arrow-up-right"></i>

@@ -9,9 +9,9 @@ if ($_SERVER['HTTP_HOST'] == 'localhost') {
 } else {
     // Live environment
     $servername = "localhost"; // e.g., "localhost" or your hosting IP
-    $username = "softwebtechs_main";
-    $password = "QX4M;AbQPtZuhCu$";
-    $dbname = "softwebtechs_main";
+    $username = "babukali_softwebtechs";
+    $password = "czFHG.%4?0B%.60L";
+    $dbname = "babukali_softwebtechs";
 }
 
 // Create connection

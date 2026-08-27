@@ -3,75 +3,81 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-       <loc>https://softwebtechs.com/</loc>
-       <lastmod>2026-08-20T16:31:28+00:00</lastmod>
+       <loc>https://www.softwebtechs.com/</loc>
+       <lastmod>2026-08-27T12:43:43+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>1.0000</priority>
   </url>
   <url>
-       <loc>https://softwebtechs.com/about.html</loc>
-       <lastmod>2026-08-20T16:31:28+00:00</lastmod>
+       <loc>https://www.softwebtechs.com/about</loc>
+       <lastmod>2026-08-27T12:43:43+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.8000</priority>
   </url>
   <url>
-       <loc>https://softwebtechs.com/digital-marketing.html</loc>
-       <lastmod>2026-08-20T16:31:28+00:00</lastmod>
+       <loc>https://www.softwebtechs.com/digital-marketing</loc>
+       <lastmod>2026-08-27T12:43:43+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.8000</priority>
   </url>
   <url>
-       <loc>https://softwebtechs.com/seo.html</loc>
-       <lastmod>2026-08-20T16:31:28+00:00</lastmod>
+       <loc>https://www.softwebtechs.com/seo</loc>
+       <lastmod>2026-08-27T12:43:43+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.8000</priority>
   </url>
   <url>
-       <loc>https://softwebtechs.com/google-ads.html</loc>
-       <lastmod>2026-08-20T16:31:28+00:00</lastmod>
+       <loc>https://www.softwebtechs.com/google-ads</loc>
+       <lastmod>2026-08-27T12:43:43+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.8000</priority>
   </url>
   <url>
-       <loc>https://softwebtechs.com/meta-ads.html</loc>
-       <lastmod>2026-08-20T16:31:28+00:00</lastmod>
+       <loc>https://www.softwebtechs.com/meta-ads</loc>
+       <lastmod>2026-08-27T12:43:43+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.8000</priority>
   </url>
   <url>
-       <loc>https://softwebtechs.com/website-design.html</loc>
-       <lastmod>2026-08-20T16:31:28+00:00</lastmod>
+       <loc>https://www.softwebtechs.com/website-design</loc>
+       <lastmod>2026-08-27T12:43:43+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.8000</priority>
   </url>
   <url>
-       <loc>https://softwebtechs.com/website-development.html</loc>
-       <lastmod>2026-08-20T16:31:28+00:00</lastmod>
+       <loc>https://www.softwebtechs.com/website-development</loc>
+       <lastmod>2026-08-27T12:43:43+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.8000</priority>
   </url>
   <url>
-       <loc>https://softwebtechs.com/pricing.html</loc>
-       <lastmod>2026-08-20T16:31:28+00:00</lastmod>
+       <loc>https://www.softwebtechs.com/pricing</loc>
+       <lastmod>2026-08-27T12:43:43+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.8000</priority>
   </url>
   <url>
-       <loc>https://softwebtechs.com/portfolio.html</loc>
-       <lastmod>2026-08-20T16:31:28+00:00</lastmod>
+       <loc>https://www.softwebtechs.com/portfolio</loc>
+       <lastmod>2026-08-27T12:43:43+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.8000</priority>
   </url>
   <url>
-       <loc>https://softwebtechs.com/blogs.html</loc>
-       <lastmod>2026-08-20T16:31:28+00:00</lastmod>
+       <loc>https://www.softwebtechs.com/blogs</loc>
+       <lastmod>2026-08-27T12:43:43+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.8000</priority>
   </url>
   <url>
-       <loc>https://softwebtechs.com/contact.html</loc>
-       <lastmod>2026-08-21T11:09:31+00:00</lastmod>
+       <loc>https://www.softwebtechs.com/contact</loc>
+       <lastmod>2026-08-27T12:43:43+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://www.softwebtechs.com/blog</loc>
+       <lastmod>2026-08-27T12:43:43+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.5120</priority>
   </url>
 </urlset>
